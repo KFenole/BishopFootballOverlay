@@ -67,114 +67,115 @@ class ViewController: NSViewController {
             print("nil fro the overlayimage")
         }
         
-        _ = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: { (Timer) in
-            
-            // TeamA Score Refresh
-            if self.teamAScore != nil {
-                self.teamAScoreLabel.stringValue = "\(self.teamAScore!)"
-            } else {
-                print("Failed to get score for Team A")
-            }
-            // TeamB Score Refresh
-            if self.teamBScore != nil {
-                self.teamBScoreLabel.stringValue = "\(self.teamBScore!)"
-            } else {
-                print("Failed to get score for Team B")
-            }
-            // TeamA TOL Refresh
-            if self.teamATOL != nil {
-                if self.teamATOL == 2 {
-                    self.teamATOLProgressI.doubleValue = 1.0
-                    self.teamATOLProgressII.doubleValue = 1.0
-                    self.teamATOLProgressIII.doubleValue = 0.0
-                } else if self.teamATOL == 1 {
-                    self.teamATOLProgressI.doubleValue = 1.0
-                    self.teamATOLProgressII.doubleValue = 0.0
-                    self.teamATOLProgressIII.doubleValue = 0.0
-                } else if self.teamATOL == 0 {
-                    self.teamATOLProgressI.doubleValue = 0.0
-                    self.teamATOLProgressII.doubleValue = 0.0
-                    self.teamATOLProgressIII.doubleValue = 0.0
+        if #available(OSX 10.12, *) {
+            _ = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: { (Timer) in
+                
+                // TeamA Score Refresh
+                if self.teamAScore != nil {
+                    self.teamAScoreLabel.stringValue = "\(self.teamAScore!)"
                 } else {
-                    self.teamATOLProgressI.doubleValue = 1.0
-                    self.teamATOLProgressII.doubleValue = 1.0
-                    self.teamATOLProgressIII.doubleValue = 1.0
+                    print("Failed to get score for Team A")
                 }
-            } else {
-                print("Failed to get TOL for Team A")
-            }
-            // TeamA TOL Refresh
-            if self.teamBTOL != nil {
-                if self.teamBTOL == 2 {
-                    self.teamBTOLProgressI.doubleValue = 1.0
-                    self.teamBTOLProgressII.doubleValue = 1.0
-                    self.teamBTOLProgressIII.doubleValue = 0.0
-                } else if self.teamBTOL == 1 {
-                    self.teamBTOLProgressI.doubleValue = 1.0
-                    self.teamBTOLProgressII.doubleValue = 0.0
-                    self.teamBTOLProgressIII.doubleValue = 0.0
-                } else if self.teamBTOL == 0 {
-                    self.teamBTOLProgressI.doubleValue = 0.0
-                    self.teamBTOLProgressII.doubleValue = 0.0
-                    self.teamBTOLProgressIII.doubleValue = 0.0
+                // TeamB Score Refresh
+                if self.teamBScore != nil {
+                    self.teamBScoreLabel.stringValue = "\(self.teamBScore!)"
                 } else {
-                    self.teamBTOLProgressI.doubleValue = 1.0
-                    self.teamBTOLProgressII.doubleValue = 1.0
-                    self.teamBTOLProgressIII.doubleValue = 1.0
+                    print("Failed to get score for Team B")
                 }
-            } else {
-                print("Failed to get TOL for Team A")
-            }
-            // Yards and Down Refresh
-            if self.down != nil && self.yards != nil {
-                var yardsString = "\(self.yards!)"
-                if self.yards! < 0 {
-                    yardsString = "Goal"
+                // TeamA TOL Refresh
+                if self.teamATOL != nil {
+                    if self.teamATOL == 2 {
+                        self.teamATOLProgressI.doubleValue = 1.0
+                        self.teamATOLProgressII.doubleValue = 1.0
+                        self.teamATOLProgressIII.doubleValue = 0.0
+                    } else if self.teamATOL == 1 {
+                        self.teamATOLProgressI.doubleValue = 1.0
+                        self.teamATOLProgressII.doubleValue = 0.0
+                        self.teamATOLProgressIII.doubleValue = 0.0
+                    } else if self.teamATOL == 0 {
+                        self.teamATOLProgressI.doubleValue = 0.0
+                        self.teamATOLProgressII.doubleValue = 0.0
+                        self.teamATOLProgressIII.doubleValue = 0.0
+                    } else {
+                        self.teamATOLProgressI.doubleValue = 1.0
+                        self.teamATOLProgressII.doubleValue = 1.0
+                        self.teamATOLProgressIII.doubleValue = 1.0
+                    }
+                } else {
+                    print("Failed to get TOL for Team A")
                 }
-                var downString = "\(self.down)"
-                if self.down == 1 {
-                    downString = "1st"
-                } else if self.down == 2 {
-                    downString = "2nd"
-                } else if self.down == 3 {
-                    downString = "3rd"
-                } else if self.down == 4 {
-                    downString = "4th"
+                // TeamA TOL Refresh
+                if self.teamBTOL != nil {
+                    if self.teamBTOL == 2 {
+                        self.teamBTOLProgressI.doubleValue = 1.0
+                        self.teamBTOLProgressII.doubleValue = 1.0
+                        self.teamBTOLProgressIII.doubleValue = 0.0
+                    } else if self.teamBTOL == 1 {
+                        self.teamBTOLProgressI.doubleValue = 1.0
+                        self.teamBTOLProgressII.doubleValue = 0.0
+                        self.teamBTOLProgressIII.doubleValue = 0.0
+                    } else if self.teamBTOL == 0 {
+                        self.teamBTOLProgressI.doubleValue = 0.0
+                        self.teamBTOLProgressII.doubleValue = 0.0
+                        self.teamBTOLProgressIII.doubleValue = 0.0
+                    } else {
+                        self.teamBTOLProgressI.doubleValue = 1.0
+                        self.teamBTOLProgressII.doubleValue = 1.0
+                        self.teamBTOLProgressIII.doubleValue = 1.0
+                    }
+                } else {
+                    print("Failed to get TOL for Team A")
                 }
-                self.downYardageLabel.stringValue = "\(downString) and \(yardsString)"
-            } else {
-                print("Failed to get yards and/or down")
-            }
-            // Quarter Refresh
-            if self.quarter != nil {
-                var quarterString = "\(self.quarter!)"
-                if self.quarter == 4 {
-                    quarterString = "4th"
-                } else if self.quarter == 3 {
-                    quarterString = "3rd"
-                } else if self.quarter == 2 {
-                    quarterString = "2nd"
-                } else if self.quarter == 1 {
-                    quarterString = "1st"
+                // Yards and Down Refresh
+                if self.down != nil && self.yards != nil {
+                    var yardsString = "\(self.yards!)"
+                    if self.yards! < 0 {
+                        yardsString = "Goal"
+                    }
+                    var downString = "\(self.down)"
+                    if self.down == 1 {
+                        downString = "1st"
+                    } else if self.down == 2 {
+                        downString = "2nd"
+                    } else if self.down == 3 {
+                        downString = "3rd"
+                    } else if self.down == 4 {
+                        downString = "4th"
+                    }
+                    self.downYardageLabel.stringValue = "\(downString) and \(yardsString)"
+                } else {
+                    print("Failed to get yards and/or down")
                 }
-                if self.specialTime == 0 {
-                    quarterString = "Half"
-                } else if self.specialTime == 1 {
-                    quarterString = "OT"
-                } else if self.specialTime == 2 {
-                    quarterString = "Final"
+                // Quarter Refresh
+                if self.quarter != nil {
+                    var quarterString = "\(self.quarter!)"
+                    if self.quarter == 4 {
+                        quarterString = "4th"
+                    } else if self.quarter == 3 {
+                        quarterString = "3rd"
+                    } else if self.quarter == 2 {
+                        quarterString = "2nd"
+                    } else if self.quarter == 1 {
+                        quarterString = "1st"
+                    }
+                    if self.specialTime == 0 {
+                        quarterString = "Half"
+                    } else if self.specialTime == 1 {
+                        quarterString = "OT"
+                    } else if self.specialTime == 2 {
+                        quarterString = "Final"
+                    }
+                    self.quarterLabel.stringValue = "\(quarterString)"
+                } else {
+                    print("Failed to get quarter")
                 }
-                self.quarterLabel.stringValue = "\(quarterString)"
-            } else {
-                print("Failed to get quarter")
-            }
-//            if !self.timeRunning! {
+                //            if !self.timeRunning! {
                 // Minute Refresh
                 if self.minutes != nil {
                     let currentClockString = self.clockLabel.stringValue
                     let currentSeconds = currentClockString.components(separatedBy: ":")[1]
                     let newClockString = "\(self.minutes!)" + ":" + "\(currentSeconds)"
-
+                    
                     self.clockLabel.stringValue = "\(newClockString)"
                     print(newClockString, "Min")
                 } else {
@@ -195,33 +196,37 @@ class ViewController: NSViewController {
                 } else {
                     print("Failed to get seconds")
                 }
-//            }
-            
-
-            if self.timeRunning == true {
-                self.startCountdownTimer()
-            } else {
-                if self.clockCountdownTimer != nil {
-                    self.clockCountdownTimer?.invalidate()
-                    self.clockCountdownTimer = nil
+                //            }
+                
+                
+                if self.timeRunning == true {
+                    self.startCountdownTimer()
+                } else {
+                    if self.clockCountdownTimer != nil {
+                        self.clockCountdownTimer?.invalidate()
+                        self.clockCountdownTimer = nil
+                    }
                 }
-            }
-            
-            if self.flag == true {
-                self.downYardageLabel.stringValue = "FLAG"
-//                self.downYardageLabel.textColor = NSColor.white
-                self.flagBGImageView.isHidden = false
-            } else {
-                self.downYardageLabel.textColor = NSColor.black
-                self.flagBGImageView.isHidden = true
-            }
-            
-            //Check if image has loaded
-            if self.overlayImage != nil && self.loadedImage == false {
-                self.backgroundImaegView.image = self.overlayImage
-                self.loadedImage = true
-            }
-        })
+                
+                if self.flag == true {
+                    self.downYardageLabel.stringValue = "FLAG"
+                    //                self.downYardageLabel.textColor = NSColor.white
+                    self.flagBGImageView.isHidden = false
+                } else {
+                    self.downYardageLabel.textColor = NSColor.black
+                    self.flagBGImageView.isHidden = true
+                }
+                
+                //Check if image has loaded
+                if self.overlayImage != nil && self.loadedImage == false {
+                    self.backgroundImaegView.image = self.overlayImage
+                    self.loadedImage = true
+                }
+            })
+        } else {
+            // Fallback on earlier versions
+            _ = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(ViewController.mainTimerStuffElCap), userInfo: nil, repeats: true)
+        }
     }
 
     override var representedObject: Any? {
@@ -241,12 +246,17 @@ class ViewController: NSViewController {
     func startCountdownTimer() {
 //        self.clockCountdownTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(ViewController.countdownOneSecond), userInfo: nil, repeats: true)
         if self.clockCountdownTimer == nil {
-            self.clockCountdownTimer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: { (Timer) in
-                self.countdownOneSecond()
-            })
+            if #available(OSX 10.12, *) {
+                self.clockCountdownTimer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: { (Timer) in
+                    self.countdownOneSecond()
+                })
+            } else {
+                // Fallback on earlier versions
+                self.clockCountdownTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(ViewController.countdownOneSecond), userInfo: nil, repeats: true)
+            }
         }
     }
-    func countdownOneSecond() {
+    @objc func countdownOneSecond() {
         let currentClockString = self.clockLabel.stringValue
         let currentMinutes = currentClockString.components(separatedBy: ":")[0]
         let currentSeconds = currentClockString.components(separatedBy: ":")[1]
@@ -286,6 +296,159 @@ class ViewController: NSViewController {
     func updateTOLQuarters() {
         teamATOLProgressI.controlTint = NSControlTint.blueControlTint //NSControlTint(rawValue: 0)!
     }
-
+    @objc func mainTimerStuffElCap() {
+        // TeamA Score Refresh
+        if self.teamAScore != nil {
+            self.teamAScoreLabel.stringValue = "\(self.teamAScore!)"
+        } else {
+            print("Failed to get score for Team A")
+        }
+        // TeamB Score Refresh
+        if self.teamBScore != nil {
+            self.teamBScoreLabel.stringValue = "\(self.teamBScore!)"
+        } else {
+            print("Failed to get score for Team B")
+        }
+        // TeamA TOL Refresh
+        if self.teamATOL != nil {
+            if self.teamATOL == 2 {
+                self.teamATOLProgressI.doubleValue = 1.0
+                self.teamATOLProgressII.doubleValue = 1.0
+                self.teamATOLProgressIII.doubleValue = 0.0
+            } else if self.teamATOL == 1 {
+                self.teamATOLProgressI.doubleValue = 1.0
+                self.teamATOLProgressII.doubleValue = 0.0
+                self.teamATOLProgressIII.doubleValue = 0.0
+            } else if self.teamATOL == 0 {
+                self.teamATOLProgressI.doubleValue = 0.0
+                self.teamATOLProgressII.doubleValue = 0.0
+                self.teamATOLProgressIII.doubleValue = 0.0
+            } else {
+                self.teamATOLProgressI.doubleValue = 1.0
+                self.teamATOLProgressII.doubleValue = 1.0
+                self.teamATOLProgressIII.doubleValue = 1.0
+            }
+        } else {
+            print("Failed to get TOL for Team A")
+        }
+        // TeamA TOL Refresh
+        if self.teamBTOL != nil {
+            if self.teamBTOL == 2 {
+                self.teamBTOLProgressI.doubleValue = 1.0
+                self.teamBTOLProgressII.doubleValue = 1.0
+                self.teamBTOLProgressIII.doubleValue = 0.0
+            } else if self.teamBTOL == 1 {
+                self.teamBTOLProgressI.doubleValue = 1.0
+                self.teamBTOLProgressII.doubleValue = 0.0
+                self.teamBTOLProgressIII.doubleValue = 0.0
+            } else if self.teamBTOL == 0 {
+                self.teamBTOLProgressI.doubleValue = 0.0
+                self.teamBTOLProgressII.doubleValue = 0.0
+                self.teamBTOLProgressIII.doubleValue = 0.0
+            } else {
+                self.teamBTOLProgressI.doubleValue = 1.0
+                self.teamBTOLProgressII.doubleValue = 1.0
+                self.teamBTOLProgressIII.doubleValue = 1.0
+            }
+        } else {
+            print("Failed to get TOL for Team A")
+        }
+        // Yards and Down Refresh
+        if self.down != nil && self.yards != nil {
+            var yardsString = "\(self.yards!)"
+            if self.yards! < 0 {
+                yardsString = "Goal"
+            }
+            var downString = "\(self.down)"
+            if self.down == 1 {
+                downString = "1st"
+            } else if self.down == 2 {
+                downString = "2nd"
+            } else if self.down == 3 {
+                downString = "3rd"
+            } else if self.down == 4 {
+                downString = "4th"
+            }
+            self.downYardageLabel.stringValue = "\(downString) and \(yardsString)"
+        } else {
+            print("Failed to get yards and/or down")
+        }
+        // Quarter Refresh
+        if self.quarter != nil {
+            var quarterString = "\(self.quarter!)"
+            if self.quarter == 4 {
+                quarterString = "4th"
+            } else if self.quarter == 3 {
+                quarterString = "3rd"
+            } else if self.quarter == 2 {
+                quarterString = "2nd"
+            } else if self.quarter == 1 {
+                quarterString = "1st"
+            }
+            if self.specialTime == 0 {
+                quarterString = "Half"
+            } else if self.specialTime == 1 {
+                quarterString = "OT"
+            } else if self.specialTime == 2 {
+                quarterString = "Final"
+            }
+            self.quarterLabel.stringValue = "\(quarterString)"
+        } else {
+            print("Failed to get quarter")
+        }
+        //            if !self.timeRunning! {
+        // Minute Refresh
+        if self.minutes != nil {
+            let currentClockString = self.clockLabel.stringValue
+            let currentSeconds = currentClockString.components(separatedBy: ":")[1]
+            let newClockString = "\(self.minutes!)" + ":" + "\(currentSeconds)"
+            
+            self.clockLabel.stringValue = "\(newClockString)"
+            print(newClockString, "Min")
+        } else {
+            print("Failed to get minutes")
+        }
+        // Second Refresh
+        if self.seconds != nil {
+            let currentClockString = self.clockLabel.stringValue
+            let currentMinutes = currentClockString.components(separatedBy: ":")[0]
+            var secondsString = "\(self.seconds!)"
+            if self.seconds! < 10 {
+                secondsString = "0\(self.seconds!)"
+            }
+            let newClockString = "\(currentMinutes)" + ":" + "\(secondsString)"
+            
+            self.clockLabel.stringValue = "\(newClockString)"
+            print(newClockString, "Sec")
+        } else {
+            print("Failed to get seconds")
+        }
+        //            }
+        
+        
+        if self.timeRunning == true {
+            self.startCountdownTimer()
+        } else {
+            if self.clockCountdownTimer != nil {
+                self.clockCountdownTimer?.invalidate()
+                self.clockCountdownTimer = nil
+            }
+        }
+        
+        if self.flag == true {
+            self.downYardageLabel.stringValue = "FLAG"
+            //                self.downYardageLabel.textColor = NSColor.white
+            self.flagBGImageView.isHidden = false
+        } else {
+            self.downYardageLabel.textColor = NSColor.black
+            self.flagBGImageView.isHidden = true
+        }
+        
+        //Check if image has loaded
+        if self.overlayImage != nil && self.loadedImage == false {
+            self.backgroundImaegView.image = self.overlayImage
+            self.loadedImage = true
+        }
+    }
 }
 

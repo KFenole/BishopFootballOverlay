@@ -17,7 +17,6 @@
 		27B0FFF91F635A9A00B6E504 /* ScoreOverlayFootball.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 27B0FFF71F635A9A00B6E504 /* ScoreOverlayFootball.xcdatamodeld */; };
 		27B0FFFB1F635A9A00B6E504 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27B0FFFA1F635A9A00B6E504 /* Assets.xcassets */; };
 		27B0FFFE1F635A9A00B6E504 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27B0FFFC1F635A9A00B6E504 /* Main.storyboard */; };
-		27C578AE1F6C5B320016F5EC /* a.png in Resources */ = {isa = PBXBuildFile; fileRef = 271699491F6B1D9F0067F2E2 /* a.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +37,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		271699491F6B1D9F0067F2E2 /* a.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = a.png; sourceTree = "<group>"; };
 		273F76441F70691100AF2D94 /* flagBgA.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flagBgA.png; sourceTree = "<group>"; };
 		2778A0201F77030500EAC37D /* x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = x.png; sourceTree = "<group>"; };
 		27A3A1D01F6797C100376850 /* ScoreInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreInputViewController.swift; sourceTree = "<group>"; };
@@ -133,7 +131,6 @@
 				27B0FFFF1F635A9A00B6E504 /* Info.plist */,
 				27B000001F635A9A00B6E504 /* ScoreOverlayFootball.entitlements */,
 				27B0FFF71F635A9A00B6E504 /* ScoreOverlayFootball.xcdatamodeld */,
-				271699491F6B1D9F0067F2E2 /* a.png */,
 				2778A0201F77030500EAC37D /* x.png */,
 			);
 			path = ScoreOverlayFootball;
@@ -258,7 +255,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27C578AE1F6C5B320016F5EC /* a.png in Resources */,
 				27B0FFFB1F635A9A00B6E504 /* Assets.xcassets in Resources */,
 				2778A0211F77034200EAC37D /* x.png in Resources */,
 				273F76451F70691600AF2D94 /* flagBgA.png in Resources */,
@@ -440,7 +436,7 @@
 				DEVELOPMENT_TEAM = 8JK8L6QR37;
 				INFOPLIST_FILE = ScoreOverlayFootball/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = com.kfenole.ScoreOverlayFootball;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -459,7 +455,7 @@
 				DEVELOPMENT_TEAM = 8JK8L6QR37;
 				INFOPLIST_FILE = ScoreOverlayFootball/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = com.kfenole.ScoreOverlayFootball;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

@@ -228,9 +228,14 @@ class ScoreInputViewController: NSViewController {
     func startCountdownTimer() {
         //        self.clockCountdownTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(ViewController.countdownOneSecond), userInfo: nil, repeats: true)
         if self.clockCountdownTimer == nil {
-            self.clockCountdownTimer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: { (Timer) in
-                self.countdownOneSecond()
-            })
+            if #available(OSX 10.12, *) {
+                self.clockCountdownTimer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: { (Timer) in
+                    self.countdownOneSecond()
+                })
+            } else {
+                // Fallback on earlier versions
+                self.clockCountdownTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(ScoreInputViewController.countdownOneSecond), userInfo: nil, repeats: true)
+            }
         }
     }
     func stopCountdownTimer() {
@@ -239,7 +244,7 @@ class ScoreInputViewController: NSViewController {
             self.clockCountdownTimer = nil
         }
     }
-    func countdownOneSecond() {
+    @objc func countdownOneSecond() {
 //        let currentClockString = self.clockLabel.stringValue
         let currentMinutes = minutesTextField.stringValue //currentClockString.components(separatedBy: ":")[0]
         let currentSeconds = staticTextField.stringValue //currentClockString.components(separatedBy: ":")[1]
