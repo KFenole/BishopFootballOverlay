@@ -15,6 +15,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
+        
+        let storyBoard = NSStoryboard(name: NSStoryboard.Name(rawValue: "Main"), bundle: nil)
+//        print(storyBoard)
+        let myController = storyBoard.instantiateController(withIdentifier: NSStoryboard.SceneIdentifier(rawValue: "Score"))
+//        print(myController.)
+//        (myController as AnyObject).showWindow
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {

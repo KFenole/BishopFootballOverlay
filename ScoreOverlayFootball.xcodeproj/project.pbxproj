@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		273F76451F70691600AF2D94 /* flagBgA.png in Resources */ = {isa = PBXBuildFile; fileRef = 273F76441F70691100AF2D94 /* flagBgA.png */; };
+		2778A0211F77034200EAC37D /* x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2778A0201F77030500EAC37D /* x.png */; };
+		27A3A1D11F6797C100376850 /* ScoreInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A3A1D01F6797C100376850 /* ScoreInputViewController.swift */; };
 		27B0000A1F635A9A00B6E504 /* ScoreOverlayFootballTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B000091F635A9A00B6E504 /* ScoreOverlayFootballTests.swift */; };
 		27B000151F635A9A00B6E504 /* ScoreOverlayFootballUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B000141F635A9A00B6E504 /* ScoreOverlayFootballUITests.swift */; };
 		27B0FFF41F635A9A00B6E504 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B0FFF31F635A9A00B6E504 /* AppDelegate.swift */; };
@@ -14,6 +17,7 @@
 		27B0FFF91F635A9A00B6E504 /* ScoreOverlayFootball.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 27B0FFF71F635A9A00B6E504 /* ScoreOverlayFootball.xcdatamodeld */; };
 		27B0FFFB1F635A9A00B6E504 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27B0FFFA1F635A9A00B6E504 /* Assets.xcassets */; };
 		27B0FFFE1F635A9A00B6E504 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27B0FFFC1F635A9A00B6E504 /* Main.storyboard */; };
+		27C578AE1F6C5B320016F5EC /* a.png in Resources */ = {isa = PBXBuildFile; fileRef = 271699491F6B1D9F0067F2E2 /* a.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +38,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		271699491F6B1D9F0067F2E2 /* a.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = a.png; sourceTree = "<group>"; };
+		273F76441F70691100AF2D94 /* flagBgA.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flagBgA.png; sourceTree = "<group>"; };
+		2778A0201F77030500EAC37D /* x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = x.png; sourceTree = "<group>"; };
+		27A3A1D01F6797C100376850 /* ScoreInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreInputViewController.swift; sourceTree = "<group>"; };
 		27B000001F635A9A00B6E504 /* ScoreOverlayFootball.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ScoreOverlayFootball.entitlements; sourceTree = "<group>"; };
 		27B000051F635A9A00B6E504 /* ScoreOverlayFootballTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScoreOverlayFootballTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		27B000091F635A9A00B6E504 /* ScoreOverlayFootballTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreOverlayFootballTests.swift; sourceTree = "<group>"; };
@@ -118,11 +126,15 @@
 			children = (
 				27B0FFF31F635A9A00B6E504 /* AppDelegate.swift */,
 				27B0FFF51F635A9A00B6E504 /* ViewController.swift */,
+				27A3A1D01F6797C100376850 /* ScoreInputViewController.swift */,
 				27B0FFFA1F635A9A00B6E504 /* Assets.xcassets */,
+				273F76441F70691100AF2D94 /* flagBgA.png */,
 				27B0FFFC1F635A9A00B6E504 /* Main.storyboard */,
 				27B0FFFF1F635A9A00B6E504 /* Info.plist */,
 				27B000001F635A9A00B6E504 /* ScoreOverlayFootball.entitlements */,
 				27B0FFF71F635A9A00B6E504 /* ScoreOverlayFootball.xcdatamodeld */,
+				271699491F6B1D9F0067F2E2 /* a.png */,
+				2778A0201F77030500EAC37D /* x.png */,
 			);
 			path = ScoreOverlayFootball;
 			sourceTree = "<group>";
@@ -203,6 +215,7 @@
 					};
 					27B0FFEF1F635A9A00B6E504 = {
 						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -245,7 +258,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27C578AE1F6C5B320016F5EC /* a.png in Resources */,
 				27B0FFFB1F635A9A00B6E504 /* Assets.xcassets in Resources */,
+				2778A0211F77034200EAC37D /* x.png in Resources */,
+				273F76451F70691600AF2D94 /* flagBgA.png in Resources */,
 				27B0FFFE1F635A9A00B6E504 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -273,6 +289,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27A3A1D11F6797C100376850 /* ScoreInputViewController.swift in Sources */,
 				27B0FFF61F635A9A00B6E504 /* ViewController.swift in Sources */,
 				27B0FFF91F635A9A00B6E504 /* ScoreOverlayFootball.xcdatamodeld in Sources */,
 				27B0FFF41F635A9A00B6E504 /* AppDelegate.swift in Sources */,
@@ -417,12 +434,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = ScoreOverlayFootball/ScoreOverlayFootball.entitlements;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 8JK8L6QR37;
 				INFOPLIST_FILE = ScoreOverlayFootball/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = com.kfenole.ScoreOverlayFootball;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
@@ -432,12 +453,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = ScoreOverlayFootball/ScoreOverlayFootball.entitlements;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 8JK8L6QR37;
 				INFOPLIST_FILE = ScoreOverlayFootball/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = com.kfenole.ScoreOverlayFootball;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
